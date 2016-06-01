@@ -12,14 +12,15 @@ docker run -it --rm  -p 9000:9000 -e ZK_HOSTS="your-zk.domain:2181" -e APPLICATI
 config copy into container (application.conf kafka logback.xml logger.xml)
 
 ###SSL
-
 SSL on by default
 certificate name is `kafka` (generate by localhost)
 
-You can use env variablet variable for ssl
-
+You can use env variablet variable for ssl.
+```
 `KM_KEYSTORE` - default value has been set to "/kafka-manager-${KM_VERSION}/conf/kafka"
+
 `KM_KEYSTORE_PASS` - default value has been set to "123456"
+```
 
 ### Use your own configuration file
 you can specify a configuration file via an environment variable.
