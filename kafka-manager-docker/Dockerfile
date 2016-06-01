@@ -46,9 +46,8 @@ RUN mkdir -p /tmp && \
     chmod +x /kafka-manager-${KM_VERSION}/km.sh
 
 #copy config
-COPY application.conf kafka logback.xml logger.xml /kafka-manager-${KM_VERSION}/conf/
+COPY ./conf/application.conf ./conf/kafka ./conf/logback.xml ./conf/logger.xml /kafka-manager-${KM_VERSION}/conf/
 #ADD application.conf /kafka-manager-${KM_VERSION}/conf/application.conf
-#ADD kafka /kafka-manager-${KM_VERSION}/conf/kafka
 
 #add user for kafka
 RUN useradd -c 'kafka manager user' -m -d /home/ukafka -s /bin/bash ukafka && \
