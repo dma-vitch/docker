@@ -1,6 +1,5 @@
 FROM centos:7
 
-MAINTAINER Ilya Shataev <ishataev-nvision-group.com>
 
 RUN yum install -y git wget unzip which && \
     yum clean all
