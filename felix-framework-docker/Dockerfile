@@ -24,6 +24,15 @@ RUN useradd -c 'felix user' -m -d /home/felix -s /bin/bash felix
 
 RUN chown -R felix /opt/felix/felix-framework-${felix_version}
 
+#add additional property
+RUN echo 'org.osgi.framework.bootdelegation=sun.*,com.sun.*,javax.*,org.w3c.*,org.xml.*,org.ietf.*' >> /opt/felix/felix-framework-${felix_version}/conf/config.properties && \
+	echo 'org.osgi.framework.system.packages.extra=org.w3c.dom.traversal,org.w3c.dom,org.w3c.dom.ranges,com.sun.jndi,com.sun.jndi.ldap,sun.misc,javax.management' >> /opt/felix/felix-framework-${felix_version}/conf/config.properties
+	
+#ENV JVM_OPTIONS="-Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=8000,suspend=n"
+
 USER felix
 
+WORKDIR /opt/felix/felix-framework-${felix_version}
+
 CMD ["bash"]
+#CMD exec java $JVM_OPTIONS -jar bin/felix.jar
