@@ -1,4 +1,4 @@
-#VERSION 0.1
+#VERSION 0.2
 FROM dmavitch/orcljdk8:latest
 
 MAINTAINER Ilya Shataev <ilya.shataev@gmail.com>
