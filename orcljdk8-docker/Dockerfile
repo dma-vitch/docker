@@ -22,9 +22,9 @@ RUN wget -nv --no-cookies --no-check-certificate \
     "http://download.oracle.com/otn-pub/java/jdk/${JAVA_MAJOR}u${JAVA_UPDATE}-b${JAVA_BUILD}/server-jre-${JAVA_MAJOR}u${JAVA_UPDATE}-linux-x64.tar.gz" -O /tmp/jdk-${JAVA_MAJOR}u${JAVA_UPDATE}-linux-x64.tar.gz && \
     tar xzf /tmp/jdk-${JAVA_MAJOR}u${JAVA_UPDATE}-linux-x64.tar.gz -C /opt  && \
     rm -f /tmp/jdk-${JAVA_MAJOR}u${JAVA_UPDATE}-linux-x64.tar.gz
-    
+
 ENV JAVA_HOME=/opt/jdk1.8.0_${JAVA_UPDATE}
-    
+
 ENV PATH /opt/jdk1.8.0_${JAVA_UPDATE}/bin:$PATH
 
 CMD ["bash"]
