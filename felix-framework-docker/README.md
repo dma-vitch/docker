@@ -12,4 +12,6 @@ If you want to upgrade/downgrade this Dockerfile, edit it and set `felix_version
 
 ### Pass arguments for run
 you can use env variable `felix_version`
+```
 docker run [...] -e felix_version="5.4.0"
+```
