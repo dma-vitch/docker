@@ -8,7 +8,7 @@ MAINTAINER Ilya Shataev <ilya.shataev@gmail.com>
 RUN yum install -y git && \
     yum clean all
 
-RUN mkdir -p /opt/zookeeper-ui && \
+RUN mkdir -p /opt/zookeeper-ui/tmp && \
     cd /tmp && \
     git clone https://github.com/tekcomms/zkui && \
     cd /tmp/zkui && \

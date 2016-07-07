@@ -12,4 +12,4 @@ sed -i -e "s/^loginMessage=.*$/loginMessage=$LOGIN_MESSAGE/" /opt/zookeeper-ui/c
 
 echo "Starting zkui with server $ZK_HOSTS"
 
-exec java -jar zkui.jar
+exec java -Djava.io.tmpdir=/opt/zookeeper-ui/tmp/ -jar zkui.jar
